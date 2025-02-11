@@ -6,7 +6,7 @@ mod tests {
 
     #[test]
     fn u16_to_u32() {
-        let v: u32 = todo!();
+        let v: u32 = 47u8;
         assert_eq!(47u16 as u32, v);
     }
 

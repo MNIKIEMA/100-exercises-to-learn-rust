@@ -2,7 +2,18 @@
 /// `13` if `n` is divisible by `3`,
 /// `17` otherwise.
 fn magic_number(n: u32) -> u32 {
-    todo!()
+    let is_even: bool = n % 2 == 0;
+    let is_divisible_by_three: bool = n % 3 == 0;
+
+    if is_even {
+        12
+    }
+    else if is_divisible_by_three {
+        13
+    }
+    else {
+        17
+    }
 }
 
 #[cfg(test)]
