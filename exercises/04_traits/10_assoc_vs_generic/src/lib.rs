@@ -23,6 +23,12 @@ impl Power for u32 {
     }
 }
 
+impl Power<&u32> for &u32 {
+    fn power(&self, n: Self) -> Self {
+        self.pow(*n as u32)
+    }
+}
+
 impl Power for u16 {
     fn power(&self, n: Self) -> Self {
         self.pow(n as u32) as u16
