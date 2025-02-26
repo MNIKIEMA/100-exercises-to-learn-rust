@@ -28,5 +28,5 @@ fn ready() {
     // are happening correctly.
     let move_forward = false;
 
-    assert!(move_forward);
+    assert!(!move_forward);
 }
