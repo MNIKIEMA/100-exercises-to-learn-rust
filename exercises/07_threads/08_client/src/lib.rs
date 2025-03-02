@@ -1,7 +1,7 @@
 use crate::data::{Ticket, TicketDraft};
 use crate::store::{TicketId, TicketStore};
 use std::sync::mpsc::{Receiver, Sender};
-use std::sync::mpsc
+use std::sync::mpsc;
 
 pub mod data;
 pub mod store;
@@ -39,7 +39,7 @@ impl TicketStoreClient {
 pub fn launch() -> TicketStoreClient {
     let (sender, receiver) = std::sync::mpsc::channel();
     std::thread::spawn(move || server(receiver));
-    todo!()
+    TicketStoreClient { sender }
 }
 
 // No longer public! This becomes an internal detail of the library now.
